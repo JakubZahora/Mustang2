@@ -15,7 +15,6 @@ function viewCurrentContact() {
     document.getElementById("stateID").value = currentContact.state;
     document.getElementById("zipID").value = currentContact.zip;  
 
-    // Todo: Add additional fields.
     document.getElementById("statusID").innerHTML = "Status: Viewing contact " + (currentContactIndex+1) + " of " + contactArray.length;
     document.getElementById("savedContacts").innerHTML = JSON.stringify(savedArray);
 }
@@ -26,9 +25,6 @@ function previous() {
     }
     currentContact = contactArray[currentContactIndex];
     viewCurrentContact();
-
-    // Todo: Disable previous button when currentContactIndex equal to 0.
-    // Todo: Save changed items to contacts array and resort array.
 }
 
 function next() {
@@ -38,8 +34,6 @@ function next() {
     currentContact = contactArray[currentContactIndex];
     viewCurrentContact();
     
-    // Todo: Disable next button when there is no next item.
-    // Todo: Save changed items to contacts array and resort array.
 }
 
 function add() {
@@ -66,12 +60,6 @@ function remove() {
 
 }
 
-function zipFocusFunction() {
-    console.log('focusFunction()');
-
-    // Todo: Remove the function as it is not needed.
-}
-
 function zipBlurFunction() {
     getPlace();
 }
@@ -89,7 +77,6 @@ function getPlace() {
     console.log("function getPlace(zip) { ... }");
     var xhr = new XMLHttpRequest();
 
-    // Register the embedded handler function
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var result = xhr.responseText;
@@ -111,7 +98,6 @@ function initApplication() {
 }
 
 function loadIndex() {
-    // Load the Mustang index file.
     var indexRequest = new XMLHttpRequest();
     indexRequest.open('GET', 'https://mustang-index.azurewebsites.net/index.json');
     indexRequest.onload = function() {
@@ -128,13 +114,9 @@ function loadIndex() {
 }
 
 function loadContacts() {
-    // Clear the current contactArray.
     contactArray.length = 0;
     loadingContact = 0;
 
-    // Note that W3C documentation and my experimentation indicate that each XMLHttpRequest callback function must be a 
-    // unique instance of a function. A better implmentation would have had an array of callback functions instead of a 
-    // recursive call to loadNextContact().
     if (contactURLArray.length > loadingContact) {
         loadNextContact(contactURLArray[loadingContact]);
     }
@@ -164,7 +146,6 @@ function loadNextContact(URL) {
             viewCurrentContact()
             console.log(contactArray);
 
-            //Todo: Sort contacts array.
         }
     }
 
