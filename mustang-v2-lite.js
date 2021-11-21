@@ -1,9 +1,8 @@
 
 var contactURLArray = [];
 var contactArray = [];
-var savedArray = [];
 var loadingContact = 0;
-var currentContactIndex = 0;
+var currentContactIndex = 0; 
 
 // Functions
 function viewCurrentContact() {
@@ -43,12 +42,6 @@ function next() {
 
 function add() {
     console.log('add()');
-    if (savedArray.includes(currentContact)) {
-        break
-    } else {
-        savedArray.push(currentContact);
-    }
-    console.log(savedArray);
 
     // Todo: Implement add functionality by inserting new element into array.
 }
