@@ -49,12 +49,17 @@ function add() {
         savedArray.push(currentContact);
     }
     console.log(savedArray);
-
-    // Todo: Implement add functionality by inserting new element into array.
 }
 
 function remove() {
     console.log('remove()');
+    if (savedArray.includes(currentContact)){
+        id = savedArray.indexOf(currentContact);
+        savedArray.splice(id, 1);
+    } else {
+        console.log("Contact was not saved!");
+    }
+    console.log(savedArray);
 
     // Todo: Implement delete functionality by deleting element from array.
 }
