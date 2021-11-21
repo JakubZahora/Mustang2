@@ -1,6 +1,6 @@
 h1 { color:red; text-align: center; }
 
-body {
+html, body {
     background-color: wheat;
     height: 100%;
     margin: 0;
