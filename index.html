@@ -15,7 +15,7 @@
         <script src="mustang-v2-lite.js"></script>
     </head>
     <body onload="initApplication()">
-        <h1>Mustang v2.2 Lite</h1>
+        <h1>Mustang_v2</h1>
         <div class="fields">
             <table align="center">
             <tr>
@@ -31,6 +31,12 @@
                 </td>
             </tr>
             <tr>
+                <td>Zip</td>
+                <td>
+                    <input id="zipID" type="text" value="" size="20" onfocus="zipFocusFunction()" onblur="zipBlurFunction()">
+                </td>
+            </tr>
+            <tr>
                 <td>City:</td>
                 <td>
                     <input id="cityID" type="text" value="" size="20">
@@ -40,12 +46,6 @@
                 <td>State:</td>
                 <td>
                     <input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()">
-                </td>
-            </tr>
-            <tr>
-                <td>Zip</td>
-                <td>
-                    <input id="zipID" type="text" value="" size="20" onfocus="zipFocusFunction()" onblur="zipBlurFunction()">
                 </td>
             </tr>
             <tr>
