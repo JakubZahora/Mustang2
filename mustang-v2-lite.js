@@ -50,6 +50,7 @@ function add() {
         savedArray.push(currentContact);
     }
     console.log(savedArray);
+    viewCurrentContact();
 }
 
 function remove() {
@@ -61,8 +62,8 @@ function remove() {
         console.log("Contact was not saved!");
     }
     console.log(savedArray);
+    viewCurrentContact();
 
-    // Todo: Implement delete functionality by deleting element from array.
 }
 
 function zipFocusFunction() {
