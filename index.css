@@ -2,8 +2,7 @@ h1 { color:red; text-align: center; }
 
 body { background-color: wheat; }
 
-table
-{ 
-margin-left: auto;
-margin-right: auto;
+.fields {
+    margin: 0 auto !important;
+    width: 80%;
 }
